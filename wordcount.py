@@ -17,10 +17,11 @@ def wordcount(filename):
 
         for word in words:
             word = word.strip(punctuation).lower()
-            if not word_counter.get(word):
-                word_counter[word] = 1
-            else:
-                word_counter[word] +=1
+            word_counter[word] = word_counter.get(word,0) + 1
+            # if not word_counter.get(word):
+            #     word_counter[word] = 1
+            # else:
+            #     word_counter[word] +=1
     f.close()
     return word_counter
 
