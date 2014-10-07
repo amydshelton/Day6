@@ -21,7 +21,7 @@ def wordcount(filename):
                 word_counter[word] = 1
             else:
                 word_counter[word] +=1
-    #close file
+    f.close()
     return word_counter
 
 
